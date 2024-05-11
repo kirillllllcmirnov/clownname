@@ -21,8 +21,8 @@ public sealed class ClownNameSystem : EntitySystem
         if(!TryComp<MetaDataComponent>(uid,out var data)){return;}
         if(!_card.TryFindIdCard(uid, out var card)){return;}
         _dialog.OpenDialog(actor.PlayerSession,"Твое имя","Введи свое имя",(string name)=>{
-            if(name!="" ){
-                _card.TryChangeFullName(card,name);
+            if(name!="" && _card.TryChangeFullName(card,name)){
+
                 _data.SetEntityName(uid,name,data);
             }
         });
