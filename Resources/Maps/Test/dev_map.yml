@@ -7732,4 +7732,11 @@ entities:
     - type: Transform
       pos: -0.11783123,4.753312
       parent: 179
+- proto: SpawnPointClown
+  entities:
+  - uid: 1488
+    components:
+    - type: Transform
+      pos: -4.5,4.5
+      parent: 179
 ...
